@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <style>
+        .center {
+            position: absolute;
+            border: 1px solid black;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-collapse: collapse;
+        }
+
+        .one,
+        .two {
+            padding: 10px;
+        }
+
+        .one {
+            text-align: right;
+        }
+        .center,.one,.two{
+            border: 1px solid black;
+            padding: 10px;
+            border-collapse: collapse;
+        }
+
+    </style>
+</head>
+
+<body>
+    {% block contant %}
+    <table class="center">
+        <tr>
+            <th class="one" colspan="2">
+                <center>View Details</center>
+            </th>
+        </tr>
+        <tr>
+            <th class="one">Name</th>
+            <td class="two">{{Name}}</td>
+        </tr>
+        <tr>
+            <th class="one">Password</th>
+            <td class="two">{{Password}}</td>
+        </tr>
+        <tr>
+            <th class="one">Address</th>
+            <td class="two">{{Address}}</td>
+        </tr>
+        <tr>
+            <th class="one">Mail</th>
+            <td class="two">{{Mail}}</td>
+        </tr>
+    </table>
+    {% endblock %}
+</body>
+
+</html>
