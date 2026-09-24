@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        .center {
+            position: absolute;
+            border: 1px solid black;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .one,
+        .two {
+            padding: 10px;
+        }
+
+        .one {
+            text-align: right;
+        }
+    </style>
+
+</head>
+
+<body>
+    {% block content %}
+    <form action="register" method="POST">
+        {% csrf_token %}
+        <table class="center">
+            <tr>
+                <th colspan="2" class="one">
+                    <center>
+                        <h3>Registration</h3>
+                        <hr>
+                    </center>
+                </th>
+            </tr>
+            <tr>
+                <th class="one">Name</th>
+                <td class="two"><input type="text" name="name"></td>
+            </tr>
+            <tr>
+                <th class="one">Password</th>
+                <td class="two"><input type="password" name="password"></td>
+            </tr>
+            <tr>
+                <th class="one">Address</th>
+                <td class="two"><input type="text" name="address"></td>
+            </tr>
+            <tr>
+                <th class="one">Mail</th>
+                <td class="two"><input type="text" name="mail"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <center><input type="submit" value="Submit"></center>
+                </td>
+            </tr>
+        </table>
+
+    </form>
+    {% endblock %}
+</body>
+
+</html>
