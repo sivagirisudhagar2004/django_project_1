@@ -19,5 +19,6 @@ from django.urls import path
 from New_Application import views
 
 urlpatterns = [
-    path('',views.home)
+    path('',views.home),
+    path('register',views.register)
 ]
