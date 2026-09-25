@@ -1,16 +1,20 @@
 <html>
-    <head>
-        <title>Home</title>
-        {% load static%}
-    </head>
+
+<head>
+    <title>Home</title>
+    {% load static %}
     <link rel="stylesheet" href="{% static 'css/style.css'%}">
-    <body>
-        <center><h1>Static file (Django)</h1></center>
-        <img src="{% static Image/1.jpg%}" alt="">
-        <img src="{% static Image/2.jpg%}" alt="">
-        <img src="{% static Image/3.jpg%}" alt="">
-        <img src="{% static Image/4.jpg%}" alt="">
-        <img src="{% static Image/5.jpg%}" alt="">
-        <img src="{% static Image/6.jpg%}" alt="">
-    </body>
+</head>
+
+<body>
+    <center><h1>Static File(Django)</h1></center>
+    <img src="{% static 'Image/1.jpg'%}" alt="">
+    <img src="{% static 'Image/2.jpg'%}" alt="">
+    <img src="{% static 'Image/3.jpg'%}" alt="">
+    <img src="{% static 'Image/4.jpg'%}" alt="">
+    <img src="{% static 'Image/5.jpg'%}" alt="">
+    <img src="{% static 'Image/6.jpg'%}" alt="">
+
+</body>
+
 </html>
