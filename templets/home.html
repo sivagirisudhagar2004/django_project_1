@@ -28,7 +28,7 @@
 
 <body>
     {% block content %}
-    <form action="register" method="POST">
+    <form action="register" method="POST" autocomplete="off">
         {% csrf_token %}
         <table class="center">
             <tr>
